@@ -1,0 +1,137 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.css">
+
+<style>
+  .ontop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  }
+  .popup h2 {
+  margin-top: 0;
+  color: #38A1F3;
+  font-family: Tahoma, Arial, sans-serif;
+  }
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  }
+.popup .close:hover {
+  color: rgb(241, 48, 48);
+  }
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  }
+</style>
+
+<div id="ldavis_el9421397093395928882979705554"></div>
+<div id="popup1" class="ontop">
+	<div class="popup">
+		<h2>Tweet</h2>
+		<a class="close" href="#">&times;</a>
+		<div id="tweet-data" class="content">
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+var ldavis_el9421397093395928882979705554_data = {"mdsDat": {"x": [-0.06358695871424135, -0.0779456975582325, -0.037508801590680006, -0.17208792808628506, -0.05980282118398872, -0.1329874808867251, 0.05891672501357385, 0.32794122188038544, -0.12042138805500453, 0.29245750872471166, -0.014974379543513825], "y": [0.30754531329196727, 0.08751128635577647, -0.24827090813875155, -0.13190138195370563, 0.04127314018204508, -0.20895422002433683, 0.008850152612380724, 0.0058445340766193595, 0.12211171208889175, -0.06000614798364145, 0.07599651949275545], "topics": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "cluster": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "Freq": [18.860319137573242, 10.545721054077148, 10.042274475097656, 9.400460243225098, 8.793390274047852, 8.669981002807617, 8.198770523071289, 8.090082168579102, 7.381793022155762, 5.496683120727539, 4.520521640777588]}, "tinfo": {"Category": ["Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic11", "Topic11", "Topic11", "Topic11", "Topic11", "Topic11"], "Freq": [236.0, 102.0, 81.0, 66.0, 68.0, 236.32740783691406, 28.62787437438965, 15.057353019714355, 13.688286781311035, 9.888483047485352, 10.90251636505127, 80.99496459960938, 34.7732048034668, 25.27008819580078, 24.77147102355957, 9.266133308410645, 60.54033279418945, 32.87158203125, 13.780350685119629, 11.667661666870117, 11.21481990814209, 60.6995849609375, 29.739360809326172, 16.066120147705078, 12.690840721130371, 12.972627639770508, 68.25403594970703, 64.22008514404297, 10.574094772338867, 2.441222906112671, 0.04782131686806679, 0.07507572323083878, 102.49885559082031, 12.779319763183594, 9.670408248901367, 6.898058891296387, 11.847805976867676, 32.69011688232422, 26.256534576416016, 22.048316955566406, 19.491851806640625, 11.461807250976562, 65.96675109863281, 16.087289810180664, 8.246661186218262, 11.031340599060059, 32.536476135253906, 38.16034698486328, 19.449068069458008, 15.921183586120605, 11.478612899780273, 10.912732124328613, 23.972440719604492, 15.101884841918945, 13.542025566101074, 11.072388648986816, 11.11327838897705, 10.831579208374023, 12.910407066345215, 22.276689529418945, 19.310028076171875, 16.153051376342773, 16.03892707824707, 0.04841030761599541, 0.07633448392152786], "Term": ["trump", "china", "time", "panic", "money", "trump", "news", "watch", "obama", "team", "open", "time", "work", "outbreak", "dying", "shut", "economy", "pence", "fight", "charge", "white", "sanitizer", "hand", "country", "control", "school", "money", "hope", "cure", "losing", "spread", "today", "china", "call", "deal", "losing", "today", "world", "government", "health", "life", "kids", "panic", "feel", "spreading", "face", "hoax", "paper", "home", "stay", "stock", "guess", "thinking", "democrats", "test", "americans", "death", "shot", "house", "response", "full", "real", "election", "losing", "today"], "Total": [236.0, 102.0, 81.0, 66.0, 68.0, 236.73106384277344, 28.9114933013916, 15.317095756530762, 13.9755277633667, 10.164748191833496, 13.536079406738281, 81.30815887451172, 35.065093994140625, 25.54474449157715, 25.070011138916016, 12.665074348449707, 60.959869384765625, 33.161216735839844, 14.086703300476074, 11.943021774291992, 11.481645584106445, 60.994510650634766, 30.15374183654785, 16.327360153198242, 12.963017463684082, 13.252801895141602, 68.5482406616211, 64.52352142333984, 10.846552848815918, 9.741950988769531, 11.406713485717773, 23.46588706970215, 102.81841278076172, 13.056514739990234, 9.94747543334961, 9.741950988769531, 23.46588706970215, 32.984405517578125, 26.54216957092285, 22.32709312438965, 19.76611328125, 11.736847877502441, 66.28463745117188, 16.359376907348633, 8.510634422302246, 13.384521484375, 39.787654876708984, 38.464111328125, 19.729082107543945, 16.201892852783203, 11.745171546936035, 11.192468643188477, 28.456485748291016, 15.380635261535645, 13.82589340209961, 11.342971801757812, 11.385443687438965, 11.10797119140625, 16.964031219482422, 22.565553665161133, 19.58032989501953, 16.422391891479492, 16.32497215270996, 9.741950988769531, 23.46588706970215], "loglift": [5.0, 4.0, 3.0, 2.0, 1.0, 1.6663999557495117, 1.6583000421524048, 1.6510000228881836, 1.6473000049591064, 1.6405999660491943, 1.45169997215271, 2.2455999851226807, 2.2411000728607178, 2.238600015640259, 2.237499952316284, 1.937000036239624, 2.2915000915527344, 2.289599895477295, 2.276400089263916, 2.2750000953674316, 2.274899959564209, 2.359600067138672, 2.350600004196167, 2.348299980163574, 2.3431999683380127, 2.3429999351501465, 2.4268999099731445, 2.426500082015991, 2.4056999683380127, 1.0471999645233154, -3.043299913406372, -3.3136000633239746, 2.442199945449829, 2.423799991607666, 2.417099952697754, 2.100100040435791, 1.7618999481201172, 2.4921998977661133, 2.4904000759124756, 2.488600015640259, 2.4872000217437744, 2.4774999618530273, 2.509700059890747, 2.49780011177063, 2.4830000400543213, 2.321199893951416, 2.3132998943328857, 2.5982000827789307, 2.591900110244751, 2.58870005607605, 2.583199977874756, 2.5808000564575195, 2.4347000122070312, 2.882699966430664, 2.8803000450134277, 2.8768999576568604, 2.876800060272217, 2.8757998943328857, 2.628000020980835, 3.083699941635132, 3.0826001167297363, 3.0799999237060547, 3.078900098800659, -2.207900047302246, -2.6315999031066895], "logprob": [5.0, 4.0, 3.0, 2.0, 1.0, -0.2913999855518341, -2.4022998809814453, -3.044800043106079, -3.1401000022888184, -3.4653000831604004, -3.3677000999450684, -0.7809000015258789, -1.6265000104904175, -1.9457000494003296, -1.9656000137329102, -2.948899984359741, -1.0231000185012817, -1.6338000297546387, -2.503200054168701, -2.669600009918213, -2.709199905395508, -0.9544000029563904, -1.6678999662399292, -2.283600091934204, -2.5195000171661377, -2.497499942779541, -0.7703999876976013, -0.8313000202178955, -2.635200023651123, -4.101099967956543, -8.033900260925293, -7.582799911499023, -0.3495999872684479, -2.4316000938415527, -2.710400104522705, -3.0481998920440674, -2.5072999000549316, -1.4364999532699585, -1.6556999683380127, -1.830299973487854, -1.9536000490188599, -2.484600067138672, -0.7210999727249146, -2.132200002670288, -2.8004000186920166, -2.509500026702881, -1.427899956703186, -1.176800012588501, -1.8508000373840332, -2.0510001182556152, -2.3780999183654785, -2.4286999702453613, -1.641700029373169, -1.808899998664856, -1.9178999662399292, -2.11929988861084, -2.115600109100342, -2.1412999629974365, -1.9657000303268433, -1.2246999740600586, -1.3675999641418457, -1.5461000204086304, -1.5532000064849854, -7.356299877166748, -6.9008002281188965]}, "token.table": {"Topic": [10, 6, 3, 6, 4, 4, 5, 6, 10, 10, 2, 3, 11, 7, 8, 8, 3, 11, 7, 9, 4, 7, 8, 10, 9, 5, 3, 10, 7, 7, 5, 6, 5, 1, 1, 1, 9, 2, 8, 9, 3, 11, 11, 4, 4, 10, 2, 4, 3, 7, 8, 9, 9, 1, 10, 4, 9, 2, 3, 4, 6, 1, 1, 3, 2, 7], "Freq": [0.9697635173797607, 0.9956715106964111, 1.0047708749771118, 0.99204021692276, 1.0028529167175293, 0.9799501895904541, 1.0141470432281494, 1.0052801370620728, 0.966145932674408, 0.9752523303031921, 0.9972074031829834, 1.0006582736968994, 0.9800935387611389, 0.14942634105682373, 0.8218448758125305, 0.9780323505401611, 0.9938450455665588, 0.970361590385437, 0.9795732498168945, 0.9828037619590759, 0.9949014186859131, 0.9853499531745911, 0.8294029831886292, 0.17593397200107574, 0.9630452990531921, 0.9918863773345947, 0.23579300940036774, 0.7663272619247437, 0.9372192621231079, 0.9612410664558411, 0.20529769361019135, 0.7185419201850891, 0.9920021295547485, 1.003061294555664, 1.0017510652542114, 0.8126429915428162, 0.1477532684803009, 0.9786748886108398, 0.9957058429718018, 0.9879339337348938, 0.99513840675354, 0.974279522895813, 0.9749373197555542, 1.0000900030136108, 0.980924665927887, 0.9902798533439636, 0.7106156349182129, 0.2368718832731247, 0.7890090346336365, 0.1753353476524353, 0.9400004148483276, 0.9875389337539673, 0.9365550875663757, 0.9837921857833862, 1.0125927925109863, 0.14056549966335297, 0.8433929681777954, 0.996209979057312, 0.2556903064250946, 0.21307526528835297, 0.5113806128501892, 0.9969118237495422, 0.979297935962677, 0.9580508470535278, 0.9981436133384705, 1.0004727840423584], "Term": ["americans", "call", "charge", "china", "control", "country", "cure", "deal", "death", "democrats", "dying", "economy", "election", "face", "face", "feel", "fight", "full", "government", "guess", "hand", "health", "hoax", "hoax", "home", "hope", "house", "house", "kids", "life", "losing", "losing", "money", "news", "obama", "open", "open", "outbreak", "panic", "paper", "pence", "real", "response", "sanitizer", "school", "shot", "shut", "shut", "spread", "spread", "spreading", "stay", "stock", "team", "test", "thinking", "thinking", "time", "today", "today", "today", "trump", "watch", "white", "work", "world"]}, "R": 5, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [11, 4, 6, 5, 8, 7, 1, 2, 10, 9, 3]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el9421397093395928882979705554", ldavis_el9421397093395928882979705554_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el9421397093395928882979705554", ldavis_el9421397093395928882979705554_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js", function(){
+         LDAvis_load_lib("https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el9421397093395928882979705554", ldavis_el9421397093395928882979705554_data);
+            })
+         });
+}
+
+const tweets_data = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin.",
+]
+
+window.onload = function() {
+  var popup = document.getElementById('popup1');
+  popup.onclick = function(){
+    document.getElementById('popup1').style.visibility = 'hidden';
+    document.getElementById('popup1').style.opacity = 0;
+  }
+  var circles = document.getElementsByClassName('dot')
+  // console.log(circles,circles.length);
+  for (var i = 0;i<circles.length;i++)
+  {
+    circles[i].setAttribute("onclick","click(this.id)");
+  }
+}
+
+function click(id){
+  console.log(id);
+  const popup = document.getElementById('popup1')
+  popup.style.visibility = 'visible';
+  popup.style.opacity = 1;
+
+  const topic_index = id.search("topic")
+  // console.log(topic_index)
+  const index = id.substr(topic_index+5,id.length) - 1
+  // console.log(index);
+  const single_tweet_data = document.getElementById('tweet-data')
+  single_tweet_data.innerHTML =  tweets_data[index]
+}
+
+
+</script>
